@@ -12,6 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Branch name
-        run: echo running on branch ${GITHUB_REF##*/}
+        run: |
+            ls -al
+            pwd
+            git log
+            git status
+            echo running on branch ${GITHUB_REF##*/}
