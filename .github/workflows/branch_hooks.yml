@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Branch name
         run: |
+            ls -al
+            pwd
             git log
             git status
             echo running on branch ${GITHUB_REF##*/}
